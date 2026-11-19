@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FULL NAME — Mobile Foot Care</title>
+<meta name="description" content="Professional foot care provided in the comfort of your own home. Serving SERVICE AREA.">
+
+<!-- Social preview (optional, fill in later) -->
+<meta property="og:title" content="FULL NAME — Mobile Foot Care">
+<meta property="og:description" content="Professional foot care in the comfort of your own home.">
+<meta property="og:type" content="website">
+
+<style>
+  :root{
+    --bg:#fbf9f5;
+    --surface:#ffffff;
+    --ink:#23312f;
+    --ink-soft:#4e615e;
+    --accent:#2f6f66;
+    --accent-dark:#1f4f49;
+    --accent-wash:#e8f1ef;
+    --line:#e2dcd2;
+    --radius:14px;
+    --maxw:none;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:1.125rem/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:100%;max-width:62rem;margin:0 auto;padding:0 1rem}
+  a{color:var(--accent-dark)}
+
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:1rem;top:1rem;z-index:99;background:#fff;padding:.75rem 1rem;border-radius:8px}
+
+  /* ---- Header ---- */
+  header{background:var(--surface);border-bottom:1px solid var(--line)}
+  .bar{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;justify-content:space-between;padding:1rem 0}
+  .brand{font-size:1.2rem;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+  .brand span{display:block;font-size:.85rem;font-weight:500;color:var(--ink-soft);letter-spacing:.02em;text-transform:uppercase}
+  nav ul{display:flex;flex-wrap:wrap;gap:1.25rem;list-style:none;margin:0;padding:0;font-size:1rem}
+  nav a{color:var(--ink-soft);text-decoration:none;font-weight:600;padding:.25rem 0;border-bottom:2px solid transparent}
+  nav a:hover,nav a:focus{color:var(--accent-dark);border-bottom-color:var(--accent)}
+
+  /* ---- Hero ---- */
+  .hero{padding:3.5rem 0 3rem}
+  .hero h1{font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 1rem;max-width:34ch}
+  .lede{font-size:clamp(1.15rem,2.4vw,1.35rem);color:var(--ink-soft);margin:0 0 2rem;max-width:52ch}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.85rem}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.95rem 1.5rem;border-radius:999px;
+    font-size:1.05rem;font-weight:700;text-decoration:none;
+    border:2px solid var(--accent-dark);
+    min-height:3rem;
+  }
+  .btn-primary{background:var(--accent-dark);color:#fff}
+  .btn-primary:hover{background:var(--accent)}
+  .btn-ghost{background:transparent;color:var(--accent-dark)}
+  .btn-ghost:hover{background:var(--accent-wash)}
+
+  /* ---- Sections ---- */
+  section{padding:3rem 0}
+  section + section{border-top:1px solid var(--line)}
+  h2{font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-.015em;margin:0 0 .5rem}
+  .sub{color:var(--ink-soft);margin:0 0 2rem;max-width:56ch}
+
+  .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
+  .card h3{margin:0 0 .4rem;font-size:1.15rem}
+  .card p{margin:0;color:var(--ink-soft);font-size:1rem}
+
+  /* ---- Steps ---- */
+  .steps{counter-reset:s;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));list-style:none;margin:0;padding:0}
+  .steps li{counter-increment:s;position:relative;padding-left:3.25rem}
+  .steps li::before{
+    content:counter(s);position:absolute;left:0;top:-.15rem;
+    width:2.4rem;height:2.4rem;border-radius:50%;
+    background:var(--accent-wash);color:var(--accent-dark);
+    display:grid;place-items:center;font-weight:700;font-size:1.1rem;
+  }
+  .steps h3{margin:.25rem 0 .35rem;font-size:1.1rem}
+  .steps p{margin:0;color:var(--ink-soft);font-size:1rem}
+
+  /* ---- About ---- */
+  .about{display:grid;gap:2rem;grid-template-columns:minmax(0,1fr)}
+  @media(min-width:48rem){.about{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}}
+  .creds{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
+  .creds h3{margin:0 0 .75rem;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}
+  .creds ul{margin:0;padding-left:1.1rem;color:var(--ink-soft);font-size:1rem}
+  .creds li{margin-bottom:.5rem}
+
+  /* ---- Contact ---- */
+  .contact{background:var(--accent-wash);border-radius:var(--radius);padding:2rem}
+  .contact-list{list-style:none;margin:1.25rem 0 0;padding:0;font-size:1.15rem}
+  .contact-list li{margin-bottom:1rem;display:flex;gap:.65rem;align-items:baseline;flex-wrap:wrap}
+  .contact-list strong{min-width:5.5rem;display:inline-block;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}
+  .contact-list a{font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px}
+
+  /* ---- Footer ---- */
+  footer{border-top:1px solid var(--line);padding:2rem 0 5.5rem;color:var(--ink-soft);font-size:.95rem}
+  @media(min-width:40rem){footer{padding-bottom:2rem}}
+
+  /* ---- Sticky call bar (phones only) ---- */
+  .callbar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:var(--accent-dark);padding:.75rem 1rem;
+    display:flex;justify-content:center;
+    box-shadow:0 -2px 12px rgba(0,0,0,.12);
+  }
+  .callbar a{color:#fff;font-weight:700;font-size:1.1rem;text-decoration:none;padding:.4rem 1rem}
+  @media(min-width:40rem){.callbar{display:none}}
+
+  /* ---- Fill-me-in markers: delete this rule once content is real ---- */
+  .todo{background:#fff3cd;outline:2px dashed #d39e00;padding:0 .2em;border-radius:3px}
+
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#141a19;--surface:#1c2423;--ink:#eef2f1;--ink-soft:#a9bab7;
+      --accent:#5fb3a6;--accent-dark:#7fc9bc;--accent-wash:#213230;--line:#2c3938;
+    }
+    :root:not([data-theme="light"]) .btn-primary{background:var(--accent-dark);color:#0f1716}
+    :root:not([data-theme="light"]) .callbar a{color:#0f1716}
+    :root:not([data-theme="light"]) .todo{background:#4a3c10;outline-color:#d39e00;color:#fff}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap bar">
+    <div class="brand">
+      <span class="todo">FULL NAME</span>
+      <span>Mobile Foot Care</span>
+    </div>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#visit">Your visit</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="wrap hero">
+    <h1>Professional foot care, in the comfort of your own home.</h1>
+    <p class="lede">
+      No travel, no waiting rooms. I bring sterilized equipment to you and take
+      the time to do things properly. Serving <span class="todo">SERVICE AREA</span>
+      and surrounding neighbourhoods.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+15550000000">Call <span class="todo">(555) 000-0000</span></a>
+      <a class="btn btn-ghost" href="#contact">Request a visit</a>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What I do</h2>
+      <p class="sub">
+        Routine and specialized foot care for adults of all ages, with extra care
+        for clients who find it hard to reach their own feet.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Routine nail care</h3>
+          <p>Trimming, filing and shaping of thickened or hard-to-reach toenails.</p>
+        </div>
+        <div class="card">
+          <h3>Callus &amp; corn care</h3>
+          <p>Careful reduction of hardened skin and pressure points so walking feels easier.</p>
+        </div>
+        <div class="card">
+          <h3>Ingrown nail care</h3>
+          <p>Relief and ongoing management of nails that curve into the skin.</p>
+        </div>
+        <div class="card">
+          <h3>Thickened &amp; fungal nails</h3>
+          <p>Reduction and tidying of thick, discoloured nails, plus advice on care between visits.</p>
+        </div>
+        <div class="card">
+          <h3>Diabetic foot care</h3>
+          <p>Gentle care and routine checks for circulation, sensation and skin changes.</p>
+        </div>
+        <div class="card">
+          <h3>Education &amp; prevention</h3>
+          <p>Practical guidance on footwear, moisturizing and what to watch for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <h2>How a visit works</h2>
+      <p class="sub">Most appointments take about <span class="todo">45&ndash;60 minutes</span>.</p>
+      <ol class="steps">
+        <li>
+          <h3>Get in touch</h3>
+          <p>Call or send a message. We'll talk about what you need and find a time that suits you.</p>
+        </li>
+        <li>
+          <h3>I come to you</h3>
+          <p>I arrive with everything required, including sterilized instruments and a comfortable setup.</p>
+        </li>
+        <li>
+          <h3>Care and advice</h3>
+          <p>Treatment at your pace, plus simple suggestions for keeping your feet well between visits.</p>
+        </li>
+        <li>
+          <h3>Stay on schedule</h3>
+          <p>Many clients book a standing appointment every <span class="todo">6&ndash;8 weeks</span>.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About <span class="todo">FIRST NAME</span></h2>
+      <div class="about">
+        <div>
+          <p class="todo" style="max-width:60ch">
+            TWO OR THREE PARAGRAPHS HERE — who she is, how long she has been doing
+            foot care, what drew her to home visits, and the tone she wants clients
+            to feel. This gets written from her resume.
+          </p>
+          <p style="color:var(--ink-soft);max-width:60ch">
+            Home visits mean care fits around your life, not the other way around.
+            That matters most for clients with limited mobility, no easy transport,
+            or anyone who would simply rather be at home.
+          </p>
+        </div>
+        <aside class="creds">
+          <h3>Credentials</h3>
+          <ul class="todo">
+            <li>CREDENTIAL / LICENSE</li>
+            <li>CERTIFICATION</li>
+            <li>YEARS OF EXPERIENCE</li>
+            <li>PROFESSIONAL MEMBERSHIP</li>
+            <li>INSURANCE / REGISTRATION</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Book a visit</h2>
+      <p class="sub">
+        Calls are usually answered the same day. If you reach voicemail, leave your
+        name and number and you'll get a call back.
+      </p>
+      <div class="contact">
+        <ul class="contact-list">
+          <li><strong>Phone</strong> <a class="todo" href="tel:+15550000000">(555) 000-0000</a></li>
+          <li><strong>Email</strong> <a class="todo" href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><strong>Area</strong> <span class="todo">SERVICE AREA</span></li>
+          <li><strong>Hours</strong> <span class="todo">Mon&ndash;Fri, 9am&ndash;5pm</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; <span class="todo">YEAR</span> <span class="todo">FULL NAME</span>. <span class="todo">Mobile foot care serving SERVICE AREA</span>.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+15550000000">Call <span class="todo">(555) 000-0000</span></a>
+</div>
+
+</body>
+</html>
