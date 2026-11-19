@@ -3,12 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FULL NAME — Mobile Foot Care</title>
-<meta name="description" content="Professional foot care provided in the comfort of your own home. Serving SERVICE AREA.">
+<title>Global Footcare — Lynn Verdooren, RN, CFCN | Albuquerque</title>
+<meta name="description" content="Board-certified foot and wound care in your own home. Lynn Verdooren, MSN, RN, CWCN, CFCN. Serving Albuquerque since 2019.">
 
-<!-- Social preview (optional, fill in later) -->
-<meta property="og:title" content="FULL NAME — Mobile Foot Care">
-<meta property="og:description" content="Professional foot care in the comfort of your own home.">
+<meta property="og:title" content="Global Footcare — Foot care at home in Albuquerque">
+<meta property="og:description" content="Board-certified foot and wound care, provided unhurried in the comfort of your own home.">
 <meta property="og:type" content="website">
 
 <style>
@@ -22,14 +21,11 @@
     --accent-wash:#e8f1ef;
     --line:#e2dcd2;
     --radius:14px;
-    --maxw:none;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
+    margin:0;background:var(--bg);color:var(--ink);
     font:1.125rem/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;
   }
@@ -39,44 +35,61 @@
   .skip{position:absolute;left:-9999px}
   .skip:focus{left:1rem;top:1rem;z-index:99;background:#fff;padding:.75rem 1rem;border-radius:8px}
 
-  /* ---- Header ---- */
   header{background:var(--surface);border-bottom:1px solid var(--line)}
   .bar{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;justify-content:space-between;padding:1rem 0}
-  .brand{font-size:1.2rem;font-weight:700;letter-spacing:-.01em;line-height:1.25}
-  .brand span{display:block;font-size:.85rem;font-weight:500;color:var(--ink-soft);letter-spacing:.02em;text-transform:uppercase}
+  .brand{font-size:1.25rem;font-weight:700;letter-spacing:-.01em;line-height:1.25}
+  .brand span{display:block;font-size:.78rem;font-weight:600;color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase;margin-top:.2rem}
   nav ul{display:flex;flex-wrap:wrap;gap:1.25rem;list-style:none;margin:0;padding:0;font-size:1rem}
   nav a{color:var(--ink-soft);text-decoration:none;font-weight:600;padding:.25rem 0;border-bottom:2px solid transparent}
   nav a:hover,nav a:focus{color:var(--accent-dark);border-bottom-color:var(--accent)}
 
-  /* ---- Hero ---- */
   .hero{padding:3.5rem 0 3rem}
+  .eyebrow{font-size:.9rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-dark);margin:0 0 1rem}
   .hero h1{font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 1rem;max-width:34ch}
-  .lede{font-size:clamp(1.15rem,2.4vw,1.35rem);color:var(--ink-soft);margin:0 0 2rem;max-width:52ch}
+  .lede{font-size:clamp(1.15rem,2.4vw,1.35rem);color:var(--ink-soft);margin:0 0 2rem;max-width:54ch}
   .cta-row{display:flex;flex-wrap:wrap;gap:.85rem}
   .btn{
     display:inline-flex;align-items:center;gap:.5rem;
     padding:.95rem 1.5rem;border-radius:999px;
     font-size:1.05rem;font-weight:700;text-decoration:none;
-    border:2px solid var(--accent-dark);
-    min-height:3rem;
+    border:2px solid var(--accent-dark);min-height:3rem;
   }
   .btn-primary{background:var(--accent-dark);color:#fff}
   .btn-primary:hover{background:var(--accent)}
   .btn-ghost{background:transparent;color:var(--accent-dark)}
   .btn-ghost:hover{background:var(--accent-wash)}
 
-  /* ---- Sections ---- */
   section{padding:3rem 0}
   section + section{border-top:1px solid var(--line)}
   h2{font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-.015em;margin:0 0 .5rem}
-  .sub{color:var(--ink-soft);margin:0 0 2rem;max-width:56ch}
+  .sub{color:var(--ink-soft);margin:0 0 2rem;max-width:58ch}
 
   .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
   .card h3{margin:0 0 .4rem;font-size:1.15rem}
   .card p{margin:0;color:var(--ink-soft);font-size:1rem}
 
-  /* ---- Steps ---- */
+  .band{background:var(--accent-wash);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .band blockquote{
+    margin:0;font-size:clamp(1.25rem,3vw,1.6rem);line-height:1.4;
+    font-weight:600;letter-spacing:-.01em;max-width:40ch;
+  }
+  .band p{color:var(--ink-soft);max-width:56ch}
+
+  /* Testimonials */
+  .quotes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}
+  .quote{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;display:flex;flex-direction:column;gap:1rem}
+  .quote blockquote{margin:0;font-size:1.05rem;line-height:1.6}
+  .quote blockquote::before{content:"\201C"}
+  .quote blockquote::after{content:"\201D"}
+  .quote cite{font-style:normal;font-weight:700;font-size:.95rem;color:var(--ink-soft);margin-top:auto}
+
+  /* Recognition */
+  .awards{list-style:none;margin:2.5rem 0 0;padding:0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+  .awards li{border-left:3px solid var(--accent);padding:.25rem 0 .25rem 1rem}
+  .awards strong{display:block;font-size:1rem}
+  .awards span{font-size:.95rem;color:var(--ink-soft)}
+
   .steps{counter-reset:s;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));list-style:none;margin:0;padding:0}
   .steps li{counter-increment:s;position:relative;padding-left:3.25rem}
   .steps li::before{
@@ -88,36 +101,35 @@
   .steps h3{margin:.25rem 0 .35rem;font-size:1.1rem}
   .steps p{margin:0;color:var(--ink-soft);font-size:1rem}
 
-  /* ---- About ---- */
   .about{display:grid;gap:2rem;grid-template-columns:minmax(0,1fr)}
   @media(min-width:48rem){.about{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}}
-  .creds{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
-  .creds h3{margin:0 0 .75rem;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}
-  .creds ul{margin:0;padding-left:1.1rem;color:var(--ink-soft);font-size:1rem}
-  .creds li{margin-bottom:.5rem}
+  .about p{max-width:62ch}
+  .creds{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;align-self:start}
+  .creds h3{margin:0 0 .75rem;font-size:.9rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft)}
+  .creds ul{margin:0;padding:0;list-style:none;font-size:1rem}
+  .creds li{margin-bottom:.85rem;line-height:1.45}
+  .creds li strong{display:block}
+  .creds li span{color:var(--ink-soft);font-size:.95rem}
 
-  /* ---- Contact ---- */
   .contact{background:var(--accent-wash);border-radius:var(--radius);padding:2rem}
   .contact-list{list-style:none;margin:1.25rem 0 0;padding:0;font-size:1.15rem}
   .contact-list li{margin-bottom:1rem;display:flex;gap:.65rem;align-items:baseline;flex-wrap:wrap}
-  .contact-list strong{min-width:5.5rem;display:inline-block;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}
+  .contact-list strong{min-width:5.5rem;display:inline-block;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft)}
   .contact-list a{font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px}
 
-  /* ---- Footer ---- */
   footer{border-top:1px solid var(--line);padding:2rem 0 5.5rem;color:var(--ink-soft);font-size:.95rem}
+  footer p{margin:.35rem 0}
   @media(min-width:40rem){footer{padding-bottom:2rem}}
 
-  /* ---- Sticky call bar (phones only) ---- */
   .callbar{
     position:fixed;left:0;right:0;bottom:0;z-index:50;
     background:var(--accent-dark);padding:.75rem 1rem;
-    display:flex;justify-content:center;
-    box-shadow:0 -2px 12px rgba(0,0,0,.12);
+    display:flex;justify-content:center;box-shadow:0 -2px 12px rgba(0,0,0,.12);
   }
   .callbar a{color:#fff;font-weight:700;font-size:1.1rem;text-decoration:none;padding:.4rem 1rem}
   @media(min-width:40rem){.callbar{display:none}}
 
-  /* ---- Fill-me-in markers: delete this rule once content is real ---- */
+  /* Remaining fill-ins. Delete this rule once everything is real. */
   .todo{background:#fff3cd;outline:2px dashed #d39e00;padding:0 .2em;border-radius:3px}
 
   @media (prefers-color-scheme:dark){
@@ -137,14 +149,14 @@
 <header>
   <div class="wrap bar">
     <div class="brand">
-      <span class="todo">FULL NAME</span>
-      <span>Mobile Foot Care</span>
+      Global Footcare
+      <span>Lynn Verdooren, RN, CFCN</span>
     </div>
     <nav aria-label="Main">
       <ul>
         <li><a href="#services">Services</a></li>
         <li><a href="#visit">Your visit</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">About Lynn</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -154,14 +166,16 @@
 <main id="main">
 
   <div class="wrap hero">
-    <h1>Professional foot care, in the comfort of your own home.</h1>
+    <p class="eyebrow">Albuquerque &middot; In-home visits since 2019</p>
+    <h1>Board-certified foot care that comes to you.</h1>
     <p class="lede">
-      No travel, no waiting rooms. I bring sterilized equipment to you and take
-      the time to do things properly. Serving <span class="todo">SERVICE AREA</span>
-      and surrounding neighbourhoods.
+      I'm Lynn Verdooren &mdash; a nurse with over twenty years' experience and board
+      certification in both foot care and wound care. I bring sterilized equipment
+      to your home, work at your pace, and take the time to know the person,
+      not just the feet.
     </p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="tel:+15550000000">Call <span class="todo">(555) 000-0000</span></a>
+      <a class="btn btn-primary" href="tel:+15053079563">Call (505) 307-9563</a>
       <a class="btn btn-ghost" href="#contact">Request a visit</a>
     </div>
   </div>
@@ -170,8 +184,8 @@
     <div class="wrap">
       <h2>What I do</h2>
       <p class="sub">
-        Routine and specialized foot care for adults of all ages, with extra care
-        for clients who find it hard to reach their own feet.
+        Routine and specialized foot care for adults of all ages, with particular
+        attention to clients who find it difficult to reach or care for their own feet.
       </p>
       <div class="grid">
         <div class="card">
@@ -180,7 +194,7 @@
         </div>
         <div class="card">
           <h3>Callus &amp; corn care</h3>
-          <p>Careful reduction of hardened skin and pressure points so walking feels easier.</p>
+          <p>Careful reduction of hardened skin and pressure points, so walking feels easier.</p>
         </div>
         <div class="card">
           <h3>Ingrown nail care</h3>
@@ -188,17 +202,103 @@
         </div>
         <div class="card">
           <h3>Thickened &amp; fungal nails</h3>
-          <p>Reduction and tidying of thick, discoloured nails, plus advice on care between visits.</p>
+          <p>Reduction and tidying of thick or discoloured nails, with advice on care between visits.</p>
         </div>
         <div class="card">
           <h3>Diabetic foot care</h3>
-          <p>Gentle care and routine checks for circulation, sensation and skin changes.</p>
+          <p>Certified diabetic foot assessment with routine checks of circulation, sensation and skin integrity.</p>
+        </div>
+        <div class="card">
+          <h3>Wound care</h3>
+          <p>As a Certified Wound Care Nurse, I manage acute, chronic and slow-healing wounds at home.</p>
         </div>
         <div class="card">
           <h3>Education &amp; prevention</h3>
-          <p>Practical guidance on footwear, moisturizing and what to watch for.</p>
+          <p>Practical guidance on footwear, moisturizing, and which changes are worth a call.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>A different kind of appointment</h2>
+      <blockquote>
+        Feet don't exist in isolation. Neither do the people they belong to.
+      </blockquote>
+      <p style="margin-top:1.5rem">
+        Alongside my nursing career, I spent a year and a half studying Ayurveda
+        &mdash; at the Ayurvedic Institute here in the United States and in Tamil Nadu,
+        India &mdash; and years teaching yoga. That training shaped how I practice.
+        I look at circulation, posture, gait, footwear and daily habits, not just
+        the nails in front of me. Often what's causing discomfort isn't where the
+        discomfort is.
+      </p>
+      <p>
+        It also means I don't rush. Appointments are unhurried on purpose, because
+        the conversation is part of the care. Many of my clients have been with me
+        for years, and I like it that way.
+      </p>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="wrap">
+      <h2>What clients say</h2>
+      <p class="sub">
+        In their own words.
+      </p>
+
+      <!--
+        ==========================================================
+        HOW TO ADD A REAL TESTIMONIAL
+        ==========================================================
+        Replace the highlighted text inside each <blockquote> with the
+        client's actual words, and the <cite> with how they'd like to be
+        credited (first name and neighbourhood is plenty).
+
+        Before publishing anyone's words, get their permission in writing
+        -- a text message or email saying yes is fine. Keep it.
+
+        Avoid quotes that promise medical results. "She's wonderful and
+        always on time" is safe. "She cured my foot pain" is a clinical
+        claim and invites trouble.
+
+        To add a fourth, copy one whole <div class="quote"> block.
+        To show fewer, delete a block. The layout adjusts on its own.
+      -->
+
+      <div class="quotes">
+        <div class="quote">
+          <blockquote class="todo">CLIENT'S OWN WORDS HERE &mdash; what the visits are like, how she makes them feel, what's different about her.</blockquote>
+          <cite class="todo">First name, neighbourhood</cite>
+        </div>
+        <div class="quote">
+          <blockquote class="todo">CLIENT'S OWN WORDS HERE &mdash; good ones mention the unhurried time, coming to the house, or being remembered between visits.</blockquote>
+          <cite class="todo">First name, neighbourhood</cite>
+        </div>
+        <div class="quote">
+          <blockquote class="todo">CLIENT'S OWN WORDS HERE &mdash; a family member's view works well too, if they arranged the care for a parent.</blockquote>
+          <cite class="todo">First name, neighbourhood</cite>
+        </div>
+      </div>
+
+      <h2 style="margin-top:3.5rem">Recognition</h2>
+      <p class="sub">Awards received over the course of my nursing career.</p>
+      <ul class="awards">
+        <li>
+          <strong>DAISY Award for Extraordinary Nurses</strong>
+          <span>2013 &middot; nominated by colleagues</span>
+        </li>
+        <li>
+          <strong>Guardian Angel Awards</strong>
+          <span>Multiple &middot; nominated by patients</span>
+        </li>
+        <li>
+          <strong>Nurse of the Year</strong>
+          <span>2002 &middot; Flagstaff Medical Center</span>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -209,15 +309,15 @@
       <ol class="steps">
         <li>
           <h3>Get in touch</h3>
-          <p>Call or send a message. We'll talk about what you need and find a time that suits you.</p>
+          <p>Call or email. We'll talk about what you need and find a time that suits you.</p>
         </li>
         <li>
           <h3>I come to you</h3>
           <p>I arrive with everything required, including sterilized instruments and a comfortable setup.</p>
         </li>
         <li>
-          <h3>Care and advice</h3>
-          <p>Treatment at your pace, plus simple suggestions for keeping your feet well between visits.</p>
+          <h3>Care, unhurried</h3>
+          <p>Treatment at your pace, with time to talk through anything you've noticed or been worried about.</p>
         </li>
         <li>
           <h3>Stay on schedule</h3>
@@ -229,28 +329,66 @@
 
   <section id="about">
     <div class="wrap">
-      <h2>About <span class="todo">FIRST NAME</span></h2>
+      <h2>About Lynn</h2>
       <div class="about">
         <div>
-          <p class="todo" style="max-width:60ch">
-            TWO OR THREE PARAGRAPHS HERE — who she is, how long she has been doing
-            foot care, what drew her to home visits, and the tone she wants clients
-            to feel. This gets written from her resume.
+          <p>
+            I've been a nurse for more than twenty years, most of that time here in
+            Albuquerque, and a good deal of it spent on home-based foot and wound care.
+            I've looked after thousands of people over the course of my career. I started
+            Global Footcare in 2019 to do that work the way I always believed it should
+            be done: in someone's own home, without a clock running, with enough time
+            to actually listen.
           </p>
-          <p style="color:var(--ink-soft);max-width:60ch">
-            Home visits mean care fits around your life, not the other way around.
-            That matters most for clients with limited mobility, no easy transport,
-            or anyone who would simply rather be at home.
+          <p>
+            I hold board certification as both a Certified Foot Care Nurse and a
+            Certified Wound Care Nurse, and I've worked as a diabetes educator. That
+            combination matters more than it sounds: the feet that need the most careful
+            attention usually belong to someone managing diabetes, circulation trouble,
+            or a wound that won't close.
+          </p>
+          <p>
+            I also tend to stay in my clients' lives. I remember birthdays, I call to
+            see how people are getting on, and I notice when something seems different.
+            For a lot of the people I see, that attention matters as much as the care
+            itself.
+          </p>
+          <p>
+            Once a month I provide volunteer foot care at the Albuquerque Westside
+            Homeless Shelter. Feet carry people through hard circumstances, and everyone
+            deserves to have theirs looked after.
           </p>
         </div>
         <aside class="creds">
           <h3>Credentials</h3>
-          <ul class="todo">
-            <li>CREDENTIAL / LICENSE</li>
-            <li>CERTIFICATION</li>
-            <li>YEARS OF EXPERIENCE</li>
-            <li>PROFESSIONAL MEMBERSHIP</li>
-            <li>INSURANCE / REGISTRATION</li>
+          <ul>
+            <li>
+              <strong>Certified Foot Care Nurse (CFCN)</strong>
+              <span>Wound, Ostomy &amp; Continence Nursing Certification Board</span>
+            </li>
+            <li>
+              <strong>Certified Wound Care Nurse (CWCN)</strong>
+              <span>Wound, Ostomy &amp; Continence Nursing Certification Board</span>
+            </li>
+            <li>
+              <strong>Registered Nurse, New Mexico</strong>
+              <span>Active &middot; license #71438</span>
+            </li>
+            <li>
+              <strong>M.S.N.</strong>
+              <span>Northern Arizona University</span>
+            </li>
+            <li>
+              <strong>B.S.N.</strong>
+              <span>University of Cincinnati</span>
+            </li>
+            <li>
+              <strong>Ayurvedic studies</strong>
+              <span>The Ayurvedic Institute, USA &amp; Tamil Nadu, India</span>
+            </li>
+            <li>
+              <strong>Certified yoga instructor</strong>
+            </li>
           </ul>
         </aside>
       </div>
@@ -262,13 +400,13 @@
       <h2>Book a visit</h2>
       <p class="sub">
         Calls are usually answered the same day. If you reach voicemail, leave your
-        name and number and you'll get a call back.
+        name and number and I'll call you back.
       </p>
       <div class="contact">
         <ul class="contact-list">
-          <li><strong>Phone</strong> <a class="todo" href="tel:+15550000000">(555) 000-0000</a></li>
-          <li><strong>Email</strong> <a class="todo" href="mailto:hello@example.com">hello@example.com</a></li>
-          <li><strong>Area</strong> <span class="todo">SERVICE AREA</span></li>
+          <li><strong>Phone</strong> <a href="tel:+15053079563">(505) 307-9563</a></li>
+          <li><strong>Email</strong> <a href="mailto:Lynnette@GlobalFoot.Care">Lynnette@GlobalFoot.Care</a></li>
+          <li><strong>Area</strong> <span>Albuquerque and surrounding communities</span></li>
           <li><strong>Hours</strong> <span class="todo">Mon&ndash;Fri, 9am&ndash;5pm</span></li>
         </ul>
       </div>
@@ -279,12 +417,13 @@
 
 <footer>
   <div class="wrap">
-    <p>&copy; <span class="todo">YEAR</span> <span class="todo">FULL NAME</span>. <span class="todo">Mobile foot care serving SERVICE AREA</span>.</p>
+    <p>&copy; 2026 Global Footcare &middot; Lynnette D. Verdooren, MSN, RN, CWCN, CFCN</p>
+    <p>In-home foot and wound care serving Albuquerque, New Mexico.</p>
   </div>
 </footer>
 
 <div class="callbar">
-  <a href="tel:+15550000000">Call <span class="todo">(555) 000-0000</span></a>
+  <a href="tel:+15053079563">Call (505) 307-9563</a>
 </div>
 
 </body>
